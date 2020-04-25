@@ -6,7 +6,7 @@ import Header from './header';
 function App() {
   return (
     <div className="container">
-      <Header />
+      <Header subtitle="Providing tiny house all over the world"/>
     </div>
   );
 }
