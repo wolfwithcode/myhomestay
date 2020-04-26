@@ -6,6 +6,7 @@ import FeaturedHouse from './featured-house'
 import HouseFilter from './house-filter';
 import SearchResults from '../search-results';
 import HouseDetail from '../house';
+import AppPresentation from './app-presentation';
 class App extends Component {
 
   state = {}
@@ -52,21 +53,16 @@ class App extends Component {
   }
 
   render(){
-    let activeComponent = null;
-    if(this.state.country)
-      activeComponent = <SearchResults country={this.state.country} 
-          filteredHouses={this.state.filteredHouses} setActiveHouse={this.setActiveHouse}  />
-    if(this.state.activeHouse)
-      activeComponent = <HouseDetail house={this.state.activeHouse} />;
-    if(!activeComponent)
-      activeComponent = <FeaturedHouse house={this.state.featuredHouse} />;
     return (
-      <div className="container">
-        <Header subtitle="Providing tiny house all over the world"/>
-        <HouseFilter  countries={this.state.countries} filterHouses={this.filterHouses}  />
-        {activeComponent}
-      </div>
-    );
+      <AppPresentation country={this.state.country}
+        filteredHouses = {this.state.filteredHouses}
+        featuredHouse = {this.featuredHouse}
+        countries = {this.countries}
+        filterHouses={this.filterHouses}
+        activeHouse={this.state.activeHouse}
+        setActiveHouse={this.setActiveHouse}
+      />
+    )
   }
 }
 

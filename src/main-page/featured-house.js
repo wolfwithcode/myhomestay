@@ -8,7 +8,7 @@ const FeaturedHouse = (props) => {
                 <h3 className="col-md-12 text-center">
                     Featured house</h3>
             </div>
-            <House house={props.house} />
+            <House  />
         </div>)
     return (<div>No featured house at this time</div>)
 };
