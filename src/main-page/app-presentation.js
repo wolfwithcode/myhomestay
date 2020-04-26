@@ -9,7 +9,7 @@ const AppPresentation = (props) => {
     let activeComponent = null;
     if(props.country)
       activeComponent = <SearchResults country={props.country} 
-          filteredHouses={props.filteredHouses} setActiveHouse={this.setActiveHouse}  />
+          filteredHouses={props.filteredHouses} setActiveHouse={props.setActiveHouse}  />
     if(props.activeHouse)
       activeComponent = <HouseDetail house={props.activeHouse} />;
     if(!activeComponent)

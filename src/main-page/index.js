@@ -56,12 +56,13 @@ class App extends Component {
     return (
       <AppPresentation country={this.state.country}
         filteredHouses = {this.state.filteredHouses}
-        featuredHouse = {this.featuredHouse}
-        countries = {this.countries}
+        featuredHouse = {this.state.featuredHouse}
+        countries = {this.state.countries}
         filterHouses={this.filterHouses}
         activeHouse={this.state.activeHouse}
         setActiveHouse={this.setActiveHouse}
       />
+    
     )
   }
 }
